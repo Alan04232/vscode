@@ -8,7 +8,6 @@ class Convolution:
         self.x = x
         self.h = h
     
-    @staticmethod
     def dft(x):
         """
         Compute the Discrete Fourier Transform (DFT) of a 1D signal.
@@ -26,7 +25,6 @@ class Convolution:
         res = np.dot(exp_term, x)
         return res
    
-    @staticmethod
     def convolve(x, h):
         """to perform convolution by multiplying the DFTs of the 
         two signals in the frequency domain and then taking the IDFT of the result."""
@@ -35,7 +33,7 @@ class Convolution:
         Y = X * H  # Element-wise multiplication
         return Convolution.idft(Y)
     
-    @staticmethod
+    
     def idft(X):
         """
         Compute the Inverse Discrete Fourier Transform (IDFT) of a 1D signal.
