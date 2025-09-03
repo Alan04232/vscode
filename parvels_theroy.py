@@ -16,7 +16,8 @@ def sum_fd(z,N):
         xk=0
         for n in range(N):
             xk=np.exp(((-2j)*(np.pi*n)/N)*(n*k))    
-            num[n]+=xk*z[n]
+            num[n]+=xk*z[n]#deactivate
+
     return num
 sum2=0
 num=sum_fd(z,N)
