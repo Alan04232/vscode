@@ -11,7 +11,7 @@ from tensorflow.keras.layers import LSTM, Dense
 cols = ['fLength', 'fWidth', 'fSize', 'fConc', 'fConc1', 'fAsym',
         'fM3Long', 'fM3Trans', 'fAlpha', 'fDist', 'class']
 
-df = pd.read_csv("/home/alan/Desktop/workspace/space/magic+gamma+telescope/magic04.csv", names=cols)
+df = pd.read_csv("D:\workspace\data\magic+gamma+telescope\magic04.data", names=cols)
 
 # Choose one feature column for sequence prediction
 series = df["fLength"].values.astype(float)
