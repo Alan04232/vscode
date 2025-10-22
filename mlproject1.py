@@ -14,7 +14,7 @@ cols = ['fLength', 'fWidth', 'fSize', 'fConc', 'fConc1', 'fAsym',
         'fM3Long', 'fM3Trans', 'fAlpha', 'fDist', 'class']
 
 # Load the dataset
-df = pd.read_csv("/home/alan/Desktop/workspace/space/magic+gamma+telescope/magic04.csv", names=cols)
+df = pd.read_csv("D:\workspace\data\magic+gamma+telescope\magic04.data", names=cols)
 df["class"]= (df['class'] == 'g').astype(int)  # Convert 'g' to 1 and 'h' to 0
 print(df.head())
 """for label in cols[:-1]:

@@ -1,6 +1,6 @@
 import numpy as np
-x=np.random.random(20)
-h=np.random.random(20)
+x=np.random.random(8)
+h=np.random.random(8)
 N=len(x)
 z=(x+h*1j)
 print(z)
@@ -16,14 +16,15 @@ def sum_fd(z,N):
         xk=0
         for n in range(N):
             xk=np.exp(((-2j)*(np.pi*n)/N)*(n*k))    
-            num[n]+=xk*z[n]#deactivate
+            num[n]+=xk*z[n]   
+            #deactivate
 
     return num
 sum2=0
 num=sum_fd(z,N)
 for i in range(N):
     sum2+=num[i]
-sum=abs(sum_td(z,N))
-sum2=sum_fd(z,N)
+sum=np.sum(abs(sum_td(z,N)))
+sum2=np.sum(sum_fd(z,N))
 print(sum)
 print(sum2)                    
