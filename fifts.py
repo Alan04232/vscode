@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 # Folder containing the FITS files
 folder_path = r"D:\workspace\data"
-q
+
 filename = "SUT_T25_1555_001472_Lev1.0_2025-10-21T15.58.55.409_0973BB02.fits"
 # Loop through all files in the folder
 for filename in os.listdir(folder_path):
@@ -25,6 +25,6 @@ for filename in os.listdir(folder_path):
             print(f"Data shape: {data.shape if data is not None else 'No data'}")
             print(f"Header keys: {len(header)} entries")
             print("-" * 60)
-plt.imshow(data, cmap='inferno', origin='lower')
+plt.imshow(data, cmap='Reds', origin='lower')
 plt.colorbar()
 plt.show()            
